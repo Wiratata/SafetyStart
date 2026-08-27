@@ -14,7 +14,7 @@ export default function CheckinCard() {
                 </View>
             </View>
             <Pressable style={styles.checklistBtn}>
-                <Text style={styles.checklistText}>CHECKLIST</Text>
+                <Text style={styles.checklistText}>START CHECKLIST</Text>
             </Pressable>      
         </View>
     )
@@ -23,7 +23,9 @@ export default function CheckinCard() {
 const styles=StyleSheet.create({
     shiftContainer: {
     backgroundColor: '#ffffff',
-    flex: .4,
+    flex: 1,
+    width: '90%',
+    height: 150,
     margin: 20,
     borderRadius: 30,
     borderColor: "#e0e0e0",
@@ -56,7 +58,7 @@ const styles=StyleSheet.create({
   },
   checklistText: {
     color: '#ffffff',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 900,
     textAlign: 'center',
 

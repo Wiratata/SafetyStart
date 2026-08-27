@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet, View, Text, Pressable, } from 'react-native';
+import { Platform, StyleSheet, View, Text, Pressable, ScrollView, } from 'react-native';
 
 
 import { HelloWave } from '@/components/hello-wave';
@@ -18,7 +18,9 @@ export default function HomeScreen() {
         <WorkerIdCard workerId={8896} name="Marcus Chen" role="Senior Site Technician" />
         <LocationCard location="Rig North-04 (Permian Basin)"/>
       </View>
-      <CheckinCard />
+      <ScrollView style={styles.scrollViewCotaniner} contentContainerStyle={{ alignItems: 'center', paddingBottom: 20 }}>
+        <CheckinCard />
+      </ScrollView>
       
     </View>
   );
@@ -28,6 +30,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'flex-start',
+    width: '100%',
+    height: '100%',
+  },
+  scrollViewCotaniner: {
+    flex: 1,
     width: '100%',
     height: '100%',
   },
