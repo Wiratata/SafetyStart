@@ -20,6 +20,11 @@ export default function HomeScreen() {
       </View>
       <ScrollView style={styles.scrollViewCotaniner} contentContainerStyle={{ alignItems: 'center', paddingBottom: 20 }}>
         <CheckinCard />
+        <View style={styles.shiftContainer}>
+          <View style={styles.pendingCard}></View>
+          <View style={styles.checkedCard}></View>
+        </View>
+
       </ScrollView>
       
     </View>
@@ -50,6 +55,28 @@ const styles = StyleSheet.create({
     paddingTop: 80,
     paddingBottom: 30,
   },
-  
-  
+  shiftContainer: {
+    width: '90%',
+    height: 100,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    margin: 10,
+  },
+  pendingCard: {
+    backgroundColor: '#efec9a',
+    width: '40%',
+    height: 100,
+    borderRadius: 20,
+    borderColor: '#rgb(255, 123, 0)',
+    borderWidth: 1,
+  },
+  checkedCard: {
+    backgroundColor: '#03002d',
+    width: '40%',
+    height: 100,
+    borderRadius: 20,
+    marginLeft: 10,
+  }
+
 });
